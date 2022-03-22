@@ -279,19 +279,19 @@
     ]
   },
   "packageFolders": {
-    "/home/rwallier/.nuget/packages/": {}
+    "/home/manu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/rwallier/Documents/Csharp/DatabaseManipulation/DatabaseManipulation.csproj",
+      "projectUniqueName": "/home/manu/Documents/DatabaseManipulation/DatabaseManipulation.csproj",
       "projectName": "DatabaseManipulation",
-      "projectPath": "/home/rwallier/Documents/Csharp/DatabaseManipulation/DatabaseManipulation.csproj",
-      "packagesPath": "/home/rwallier/.nuget/packages/",
-      "outputPath": "/home/rwallier/Documents/Csharp/DatabaseManipulation/obj/",
+      "projectPath": "/home/manu/Documents/DatabaseManipulation/DatabaseManipulation.csproj",
+      "packagesPath": "/home/manu/.nuget/packages/",
+      "outputPath": "/home/manu/Documents/DatabaseManipulation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/rwallier/.nuget/NuGet/NuGet.Config"
+        "/home/manu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -330,6 +330,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.3, 6.0.3]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
