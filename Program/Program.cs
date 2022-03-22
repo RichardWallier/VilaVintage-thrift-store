@@ -7,12 +7,17 @@ namespace DatabaseManipulation
 	{
 		public static void Main()
 		{
-			Console.WriteLine("which operation want to do ?");
-			Console.WriteLine("(1) - add a new product in database");
-			Console.WriteLine("(2) - att a product of database");
-			Console.WriteLine("(3) - list products of database");
-			Console.WriteLine("(4) - remove a product of database");
-			int selectionInput = Convert.ToInt32(Console.ReadLine());
+			int selectionInput;
+			do
+			{
+				Console.WriteLine("(1) - add a new product in database");
+				Console.WriteLine("which operation want to do ?");
+				Console.WriteLine("(2) - att a product of database");
+				Console.WriteLine("(3) - list products of database");
+				Console.WriteLine("(4) - remove a product of database");
+				Console.WriteLine("(0) - close app");
+				selectionInput = Convert.ToInt32(Console.ReadLine());
+			} while (selectionInput < 0 || selectionInput > 4);
 
 			if (selectionInput == 1)
 			{
@@ -67,7 +72,19 @@ namespace DatabaseManipulation
 				else if (selectionInput == 2)
 					Console.WriteLine("removing product from database");
 			}
-		
+			else if (selectionInput == 4)
+			{
+				Console.WriteLine("Which tag to remove ?");
+				string tag = Convert.ToString(Console.ReadLine());
+
+				DataControl data = new DataControl();
+				data.RemoveProduct(tag);
+			}
+			else if (selectionInput == 0)
+			{
+				return;
+			}
+			Main();
 		}
 	}
 }

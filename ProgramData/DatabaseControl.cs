@@ -27,11 +27,23 @@ namespace ProgramData
 			data.Open();
 
 			using var cmd = new SQLiteCommand(data);
-			cmd.CommandText = $"UPDATE Products SET price = '{price}', dateOUT = '{dateOUT}', sold = 1 WHERE tag = '{tag}'";
+			cmd.CommandText = $"UPDATE Products SET price = '{price}', dateOUT = '{dateOUT}', sold = 1 WHERE tag = '{tag}';";
 			cmd.ExecuteNonQuery();
 
 			data.Close();
 			Console.WriteLine($"sold item {tag}, price = {price}, dateOUT = {dateOUT}");
+		}
+		public void RemoveProduct(string tag)
+		{
+			using var data = new SQLiteConnection(LocalData);
+			data.Open();
+
+			using var cmd = new SQLiteCommand(data);
+			cmd.CommandText = $"DELETE FROM Products WHERE tag = '{tag}';";
+			cmd.ExecuteNonQuery();
+
+			data.Close();
+			Console.WriteLine($"Removed {tag} from products");
 		}
 	}
 }
