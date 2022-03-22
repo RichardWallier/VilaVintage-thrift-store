@@ -1,10 +1,12 @@
-﻿namespace DatabaseManipulation
+﻿using ProgramData;
+
+
+namespace DatabaseManipulation
 {
 	class Program
 	{
 		public static void Main()
 		{
-			// using (var data = new sqliteconnection("local file"));
 			Console.WriteLine("which operation want to do ?");
 			Console.WriteLine("(1) - add a new product in database");
 			Console.WriteLine("(2) - att a product of database");
@@ -13,9 +15,42 @@
 			int selectionInput = Convert.ToInt32(Console.ReadLine());
 
 			if (selectionInput == 1)
-				Console.WriteLine("added new product");
+			{
+				Console.WriteLine("Which tag ?");
+				string tag = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which description ?");
+				string description = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which brand ?");
+				string brand = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which price ?");
+				double price = Double.Parse(Console.ReadLine());
+
+				Console.WriteLine("Which details ?");
+				string details = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which date IN ?");
+				string dateIN = Convert.ToString(Console.ReadLine());
+
+				DataControl data = new DataControl();
+				data.AddProduct(tag, description, brand, price, details, dateIN);
+			}
 			else if (selectionInput == 2)
-				Console.WriteLine("atualizate a product");
+			{
+				Console.WriteLine("Which tag to sold ?")
+				string tag = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which price of sold ?");
+				double price = Convert.ToString(Console.ReadLine());
+
+				Console.WriteLine("Which date of sold ?");
+				string dateIN = Convert.ToString(Console.ReadLine());
+
+				DataControl data = new Datacontrol();
+				data.SellProduct(tag, price, dateIN)
+			}
 			else if (selectionInput == 3)
 			{
 				Console.WriteLine("You want to list:");
@@ -32,7 +67,7 @@
 				else if (selectionInput == 2)
 					Console.WriteLine("removing product from database");
 			}
-			Main();
+		
 		}
 	}
 }

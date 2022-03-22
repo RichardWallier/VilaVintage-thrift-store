@@ -1,3 +1,6 @@
+https://zetcode.com/csharp/sqlite/
+
+
 CREATE TABLE IN DB = {
 	CREATE TABLE "Products" (
 		"tag"	TEXT,
