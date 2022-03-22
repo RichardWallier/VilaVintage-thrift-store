@@ -39,17 +39,17 @@ namespace DatabaseManipulation
 			}
 			else if (selectionInput == 2)
 			{
-				Console.WriteLine("Which tag to sold ?")
+				Console.WriteLine("Which tag ?");
 				string tag = Convert.ToString(Console.ReadLine());
 
-				Console.WriteLine("Which price of sold ?");
-				double price = Convert.ToString(Console.ReadLine());
+				Console.WriteLine("Which sold price ?");
+				double price = Double.Parse(Console.ReadLine());
 
-				Console.WriteLine("Which date of sold ?");
-				string dateIN = Convert.ToString(Console.ReadLine());
+				Console.WriteLine("Which dateOUT ?");
+				string dateOUT = Convert.ToString(Console.ReadLine());
 
-				DataControl data = new Datacontrol();
-				data.SellProduct(tag, price, dateIN)
+				DataControl data = new DataControl();
+				data.SellProduct(tag, price, dateOUT);
 			}
 			else if (selectionInput == 3)
 			{
