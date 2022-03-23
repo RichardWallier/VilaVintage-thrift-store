@@ -45,5 +45,23 @@ namespace ProgramData
 			data.Close();
 			Console.WriteLine($"Removed {tag} from products");
 		}
+
+		// public void ListAllProduct()
+		// {
+		// 	using var data = new SQLiteConnection(LocalData);
+		// 	data.Open();
+
+		// 	using var cmd = new SQLiteCommand(data);
+		// 	cmd.CommandText = "SELECT * FROM Products WHERE 1 = 1";
+		// 	using var dataRead = cmd.ExecuteReader();
+		// 	while (dataRead.Read())
+		// 	{
+		// 		string row = dataRead.GetString(0);
+		// 		Console.WriteLine(row);
+		// 	}
+
+		// 	data.Close();
+		// 	Console.WriteLine("selected all from products");
+		// }
 	}
 }

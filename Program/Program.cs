@@ -22,22 +22,22 @@ namespace DatabaseManipulation
 			if (selectionInput == 1)
 			{
 				Console.WriteLine("Which tag ?");
-				string tag = Convert.ToString(Console.ReadLine());
+				string? tag = Convert.ToString(Console.ReadLine());
 
 				Console.WriteLine("Which description ?");
-				string description = Convert.ToString(Console.ReadLine());
+				string? description = Convert.ToString(Console.ReadLine());
 
 				Console.WriteLine("Which brand ?");
-				string brand = Convert.ToString(Console.ReadLine());
+				string? brand = Convert.ToString(Console.ReadLine());
 
 				Console.WriteLine("Which price ?");
 				double price = Double.Parse(Console.ReadLine());
 
 				Console.WriteLine("Which details ?");
-				string details = Convert.ToString(Console.ReadLine());
+				string? details = Convert.ToString(Console.ReadLine());
 
 				Console.WriteLine("Which date IN ?");
-				string dateIN = Convert.ToString(Console.ReadLine());
+				string? dateIN = Convert.ToString(Console.ReadLine());
 
 				DataControl data = new DataControl();
 				data.AddProduct(tag, description, brand, price, details, dateIN);
@@ -45,13 +45,13 @@ namespace DatabaseManipulation
 			else if (selectionInput == 2)
 			{
 				Console.WriteLine("Which tag ?");
-				string tag = Convert.ToString(Console.ReadLine());
+				string? tag = Convert.ToString(Console.ReadLine());
 
 				Console.WriteLine("Which sold price ?");
 				double price = Double.Parse(Console.ReadLine());
 
 				Console.WriteLine("Which dateOUT ?");
-				string dateOUT = Convert.ToString(Console.ReadLine());
+				string? dateOUT = Convert.ToString(Console.ReadLine());
 
 				DataControl data = new DataControl();
 				data.SellProduct(tag, price, dateOUT);
@@ -64,7 +64,12 @@ namespace DatabaseManipulation
 				Console.WriteLine("(3) available products");
 				int selectionListInput = Convert.ToInt32(Console.ReadLine());
 				if (selectionListInput == 1)
+				{
+					// DataControl data = new DataControl();
+					// data.ListAllProduct();
+
 					Console.WriteLine("listing all products");
+				}
 				else if (selectionListInput == 2)
 					Console.WriteLine("listing sold products");
 				else if (selectionListInput == 3)
@@ -75,7 +80,7 @@ namespace DatabaseManipulation
 			else if (selectionInput == 4)
 			{
 				Console.WriteLine("Which tag to remove ?");
-				string tag = Convert.ToString(Console.ReadLine());
+				string? tag = Convert.ToString(Console.ReadLine());
 
 				DataControl data = new DataControl();
 				data.RemoveProduct(tag);
