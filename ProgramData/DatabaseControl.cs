@@ -1,8 +1,9 @@
 using System.Data.SQLite;
+using programCore;
 
-namespace ProgramData
+namespace ProgramData 
 {
-	class DataControl
+	class DataControl 
 	{
 
 		private string LocalData = "Data Source=./ProgramData/database.db";
