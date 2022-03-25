@@ -33,6 +33,7 @@ namespace ProgramData
 			data.Close();
 			Console.WriteLine($"sold item {tag}, price = {price}, dateOUT = {dateOUT}");
 		}
+
 		public void RemoveProduct(string tag)
 		{
 			using var data = new SQLiteConnection(LocalData);
