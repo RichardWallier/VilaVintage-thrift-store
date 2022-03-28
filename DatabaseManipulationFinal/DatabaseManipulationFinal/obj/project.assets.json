@@ -1193,11 +1193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation-main\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
+      "projectUniqueName": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
       "projectName": "DatabaseManipulationFinal",
-      "projectPath": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation-main\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
+      "projectPath": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
       "packagesPath": "C:\\Users\\rwall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation-main\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\obj\\",
+      "outputPath": "C:\\Users\\rwall\\Desktop\\DatabaseManipulation\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

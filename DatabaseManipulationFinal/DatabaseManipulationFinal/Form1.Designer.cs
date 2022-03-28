@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.seeAllPageIconButton = new FontAwesome.Sharp.IconButton();
             this.removePageIconButton = new FontAwesome.Sharp.IconButton();
             this.attPageIconButton = new FontAwesome.Sharp.IconButton();
             this.addPageIconButton = new FontAwesome.Sharp.IconButton();
@@ -60,6 +61,41 @@
             this.dateOUTIcon = new FontAwesome.Sharp.IconPictureBox();
             this.dateOUTLabel = new System.Windows.Forms.Label();
             this.dateOUTTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.details = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refreshSeeIconButton = new FontAwesome.Sharp.IconButton();
+            this.addProductButton = new FontAwesome.Sharp.IconButton();
+            this.attProductButton = new FontAwesome.Sharp.IconButton();
+            this.removeProductButton = new FontAwesome.Sharp.IconButton();
+            this.checkLabel = new System.Windows.Forms.Label();
+            this.soonLabel = new System.Windows.Forms.Label();
+            this.Etiqueta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalhes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bigPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,11 +106,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.detailsIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateINIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateOUTIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bigPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
+            this.panel1.Controls.Add(this.seeAllPageIconButton);
             this.panel1.Controls.Add(this.removePageIconButton);
             this.panel1.Controls.Add(this.attPageIconButton);
             this.panel1.Controls.Add(this.addPageIconButton);
@@ -86,6 +126,25 @@
             this.panel1.Size = new System.Drawing.Size(270, 550);
             this.panel1.TabIndex = 0;
             // 
+            // seeAllPageIconButton
+            // 
+            this.seeAllPageIconButton.FlatAppearance.BorderSize = 0;
+            this.seeAllPageIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seeAllPageIconButton.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.seeAllPageIconButton.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.seeAllPageIconButton.IconColor = System.Drawing.Color.Black;
+            this.seeAllPageIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.seeAllPageIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seeAllPageIconButton.Location = new System.Drawing.Point(0, 403);
+            this.seeAllPageIconButton.Name = "seeAllPageIconButton";
+            this.seeAllPageIconButton.Size = new System.Drawing.Size(270, 60);
+            this.seeAllPageIconButton.TabIndex = 5;
+            this.seeAllPageIconButton.Text = "Ver ";
+            this.seeAllPageIconButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seeAllPageIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.seeAllPageIconButton.UseVisualStyleBackColor = true;
+            this.seeAllPageIconButton.Click += new System.EventHandler(this.seeAllIconButton_Click);
+            // 
             // removePageIconButton
             // 
             this.removePageIconButton.FlatAppearance.BorderSize = 0;
@@ -95,7 +154,7 @@
             this.removePageIconButton.IconColor = System.Drawing.Color.Black;
             this.removePageIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.removePageIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.removePageIconButton.Location = new System.Drawing.Point(0, 377);
+            this.removePageIconButton.Location = new System.Drawing.Point(0, 347);
             this.removePageIconButton.Name = "removePageIconButton";
             this.removePageIconButton.Size = new System.Drawing.Size(270, 60);
             this.removePageIconButton.TabIndex = 4;
@@ -114,7 +173,7 @@
             this.attPageIconButton.IconColor = System.Drawing.Color.Black;
             this.attPageIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.attPageIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.attPageIconButton.Location = new System.Drawing.Point(0, 318);
+            this.attPageIconButton.Location = new System.Drawing.Point(0, 288);
             this.attPageIconButton.Name = "attPageIconButton";
             this.attPageIconButton.Size = new System.Drawing.Size(270, 60);
             this.attPageIconButton.TabIndex = 3;
@@ -133,7 +192,7 @@
             this.addPageIconButton.IconColor = System.Drawing.Color.Black;
             this.addPageIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addPageIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addPageIconButton.Location = new System.Drawing.Point(0, 259);
+            this.addPageIconButton.Location = new System.Drawing.Point(0, 229);
             this.addPageIconButton.Name = "addPageIconButton";
             this.addPageIconButton.Size = new System.Drawing.Size(270, 60);
             this.addPageIconButton.TabIndex = 2;
@@ -152,7 +211,7 @@
             this.sellPageIconButton.IconColor = System.Drawing.Color.Black;
             this.sellPageIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sellPageIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sellPageIconButton.Location = new System.Drawing.Point(0, 201);
+            this.sellPageIconButton.Location = new System.Drawing.Point(0, 171);
             this.sellPageIconButton.Name = "sellPageIconButton";
             this.sellPageIconButton.Size = new System.Drawing.Size(270, 60);
             this.sellPageIconButton.TabIndex = 1;
@@ -212,9 +271,10 @@
             this.tagTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.tagTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tagTextBox.Location = new System.Drawing.Point(645, 67);
+            this.tagTextBox.MaxLength = 255;
             this.tagTextBox.Name = "tagTextBox";
             this.tagTextBox.Size = new System.Drawing.Size(455, 33);
-            this.tagTextBox.TabIndex = 2;
+            this.tagTextBox.TabIndex = 6;
             // 
             // tagLabel
             // 
@@ -269,6 +329,7 @@
             this.descriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.descriptionTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(645, 118);
+            this.descriptionTextBox.MaxLength = 255;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(455, 33);
             this.descriptionTextBox.TabIndex = 7;
@@ -283,6 +344,7 @@
             this.brandIcon.IconSize = 35;
             this.brandIcon.Location = new System.Drawing.Point(379, 171);
             this.brandIcon.Name = "brandIcon";
+            this.brandIcon.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.brandIcon.Size = new System.Drawing.Size(35, 52);
             this.brandIcon.TabIndex = 8;
             this.brandIcon.TabStop = false;
@@ -302,9 +364,10 @@
             this.brandTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.brandTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.brandTextBox.Location = new System.Drawing.Point(645, 167);
+            this.brandTextBox.MaxLength = 255;
             this.brandTextBox.Name = "brandTextBox";
             this.brandTextBox.Size = new System.Drawing.Size(455, 33);
-            this.brandTextBox.TabIndex = 10;
+            this.brandTextBox.TabIndex = 8;
             // 
             // priceIcon
             // 
@@ -340,6 +403,7 @@
             this.detailsIcon.IconSize = 35;
             this.detailsIcon.Location = new System.Drawing.Point(379, 273);
             this.detailsIcon.Name = "detailsIcon";
+            this.detailsIcon.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.detailsIcon.Size = new System.Drawing.Size(35, 52);
             this.detailsIcon.TabIndex = 13;
             this.detailsIcon.TabStop = false;
@@ -360,18 +424,20 @@
             this.priceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.priceTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.priceTextBox.Location = new System.Drawing.Point(645, 217);
+            this.priceTextBox.MaxLength = 255;
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(455, 33);
-            this.priceTextBox.TabIndex = 15;
+            this.priceTextBox.TabIndex = 9;
             // 
             // detailsTextBox
             // 
             this.detailsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.detailsTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.detailsTextBox.Location = new System.Drawing.Point(645, 268);
+            this.detailsTextBox.MaxLength = 255;
             this.detailsTextBox.Name = "detailsTextBox";
             this.detailsTextBox.Size = new System.Drawing.Size(455, 33);
-            this.detailsTextBox.TabIndex = 16;
+            this.detailsTextBox.TabIndex = 10;
             // 
             // dateINIcon
             // 
@@ -402,24 +468,26 @@
             this.dateINTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.dateINTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateINTextBox.Location = new System.Drawing.Point(645, 318);
+            this.dateINTextBox.MaxLength = 255;
             this.dateINTextBox.Name = "dateINTextBox";
             this.dateINTextBox.Size = new System.Drawing.Size(455, 33);
-            this.dateINTextBox.TabIndex = 19;
+            this.dateINTextBox.TabIndex = 11;
             // 
             // sellProductButton
             // 
             this.sellProductButton.Font = new System.Drawing.Font("Malgun Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sellProductButton.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.sellProductButton.IconChar = FontAwesome.Sharp.IconChar.Donate;
             this.sellProductButton.IconColor = System.Drawing.Color.Black;
             this.sellProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sellProductButton.IconSize = 90;
+            this.sellProductButton.IconSize = 60;
             this.sellProductButton.Location = new System.Drawing.Point(603, 457);
             this.sellProductButton.Name = "sellProductButton";
             this.sellProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.sellProductButton.Size = new System.Drawing.Size(219, 81);
-            this.sellProductButton.TabIndex = 20;
+            this.sellProductButton.TabIndex = 13;
             this.sellProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sellProductButton.UseVisualStyleBackColor = true;
+            this.sellProductButton.Click += new System.EventHandler(this.sellProductButton_Click_1);
             // 
             // dateOUTIcon
             // 
@@ -451,9 +519,279 @@
             this.dateOUTTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(187)))), ((int)(((byte)(172)))));
             this.dateOUTTextBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateOUTTextBox.Location = new System.Drawing.Point(645, 370);
+            this.dateOUTTextBox.MaxLength = 255;
             this.dateOUTTextBox.Name = "dateOUTTextBox";
             this.dateOUTTextBox.Size = new System.Drawing.Size(455, 33);
-            this.dateOUTTextBox.TabIndex = 23;
+            this.dateOUTTextBox.TabIndex = 12;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tag,
+            this.description,
+            this.brand,
+            this.price,
+            this.details,
+            this.dateIN,
+            this.dateOUT,
+            this.sold});
+            this.dataGridView1.Location = new System.Drawing.Point(300, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(834, 436);
+            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // tag
+            // 
+            this.tag.HeaderText = "Etiqueta";
+            this.tag.Name = "tag";
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Descrição";
+            this.description.Name = "description";
+            // 
+            // brand
+            // 
+            this.brand.HeaderText = "Marca";
+            this.brand.Name = "brand";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Preço";
+            this.price.Name = "price";
+            // 
+            // details
+            // 
+            this.details.HeaderText = "Detalhes";
+            this.details.Name = "details";
+            // 
+            // dateIN
+            // 
+            this.dateIN.HeaderText = "Data de entrada";
+            this.dateIN.Name = "dateIN";
+            // 
+            // dateOUT
+            // 
+            this.dateOUT.HeaderText = "Data de saída";
+            this.dateOUT.Name = "dateOUT";
+            // 
+            // sold
+            // 
+            this.sold.HeaderText = "Vendido";
+            this.sold.Name = "sold";
+            // 
+            // refreshSeeIconButton
+            // 
+            this.refreshSeeIconButton.Font = new System.Drawing.Font("Malgun Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.refreshSeeIconButton.IconChar = FontAwesome.Sharp.IconChar.Retweet;
+            this.refreshSeeIconButton.IconColor = System.Drawing.Color.Black;
+            this.refreshSeeIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshSeeIconButton.IconSize = 60;
+            this.refreshSeeIconButton.Location = new System.Drawing.Point(300, 509);
+            this.refreshSeeIconButton.Name = "refreshSeeIconButton";
+            this.refreshSeeIconButton.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.refreshSeeIconButton.Size = new System.Drawing.Size(215, 35);
+            this.refreshSeeIconButton.TabIndex = 14;
+            this.refreshSeeIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.refreshSeeIconButton.UseVisualStyleBackColor = true;
+            this.refreshSeeIconButton.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // addProductButton
+            // 
+            this.addProductButton.Font = new System.Drawing.Font("Malgun Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addProductButton.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.addProductButton.IconColor = System.Drawing.Color.Black;
+            this.addProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addProductButton.IconSize = 60;
+            this.addProductButton.Location = new System.Drawing.Point(603, 457);
+            this.addProductButton.Name = "addProductButton";
+            this.addProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.addProductButton.Size = new System.Drawing.Size(219, 81);
+            this.addProductButton.TabIndex = 13;
+            this.addProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click_1);
+            // 
+            // attProductButton
+            // 
+            this.attProductButton.Font = new System.Drawing.Font("Malgun Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.attProductButton.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.attProductButton.IconColor = System.Drawing.Color.Black;
+            this.attProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.attProductButton.IconSize = 60;
+            this.attProductButton.Location = new System.Drawing.Point(603, 457);
+            this.attProductButton.Name = "attProductButton";
+            this.attProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.attProductButton.Size = new System.Drawing.Size(219, 81);
+            this.attProductButton.TabIndex = 13;
+            this.attProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.attProductButton.UseVisualStyleBackColor = true;
+            this.attProductButton.Click += new System.EventHandler(this.attProductButton_Click_1);
+            // 
+            // removeProductButton
+            // 
+            this.removeProductButton.Font = new System.Drawing.Font("Malgun Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.removeProductButton.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.removeProductButton.IconColor = System.Drawing.Color.Black;
+            this.removeProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.removeProductButton.IconSize = 60;
+            this.removeProductButton.Location = new System.Drawing.Point(603, 457);
+            this.removeProductButton.Name = "removeProductButton";
+            this.removeProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.removeProductButton.Size = new System.Drawing.Size(219, 81);
+            this.removeProductButton.TabIndex = 13;
+            this.removeProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.removeProductButton.UseVisualStyleBackColor = true;
+            this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
+            // 
+            // checkLabel
+            // 
+            this.checkLabel.AutoSize = true;
+            this.checkLabel.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkLabel.Location = new System.Drawing.Point(549, 426);
+            this.checkLabel.Name = "checkLabel";
+            this.checkLabel.Size = new System.Drawing.Size(55, 21);
+            this.checkLabel.TabIndex = 0;
+            this.checkLabel.Text = "label1";
+            // 
+            // soonLabel
+            // 
+            this.soonLabel.AutoSize = true;
+            this.soonLabel.Font = new System.Drawing.Font("Malgun Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.soonLabel.Location = new System.Drawing.Point(549, 223);
+            this.soonLabel.Name = "soonLabel";
+            this.soonLabel.Size = new System.Drawing.Size(158, 65);
+            this.soonLabel.TabIndex = 0;
+            this.soonLabel.Text = "label1";
+            // 
+            // Etiqueta
+            // 
+            this.Etiqueta.HeaderText = "Etiqueta";
+            this.Etiqueta.Name = "Etiqueta";
+            // 
+            // Descrição
+            // 
+            this.Descrição.HeaderText = "Descrição";
+            this.Descrição.Name = "Descrição";
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            // 
+            // Preço
+            // 
+            this.Preço.HeaderText = "Preço";
+            this.Preço.Name = "Preço";
+            // 
+            // Detalhes
+            // 
+            this.Detalhes.HeaderText = "Detalhes";
+            this.Detalhes.Name = "Detalhes";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Etiqueta";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Detalhes";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dataGridView2.Location = new System.Drawing.Point(300, 58);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(834, 345);
+            this.dataGridView2.TabIndex = 26;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Etiqueta";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Detalhes";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Data de entrada";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Data de saída";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Vendido";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // bigPictureBox
+            // 
+            this.bigPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bigPictureBox.Image = global::DatabaseManipulationFinal.Properties.Resources.cuted;
+            this.bigPictureBox.Location = new System.Drawing.Point(270, 52);
+            this.bigPictureBox.Name = "bigPictureBox";
+            this.bigPictureBox.Size = new System.Drawing.Size(775, 498);
+            this.bigPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bigPictureBox.TabIndex = 27;
+            this.bigPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -461,6 +799,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(117)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(1170, 550);
+            this.Controls.Add(this.bigPictureBox);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.soonLabel);
+            this.Controls.Add(this.checkLabel);
+            this.Controls.Add(this.removeProductButton);
+            this.Controls.Add(this.attProductButton);
+            this.Controls.Add(this.addProductButton);
+            this.Controls.Add(this.refreshSeeIconButton);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateOUTTextBox);
             this.Controls.Add(this.dateOUTLabel);
             this.Controls.Add(this.dateOUTIcon);
@@ -498,6 +845,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.detailsIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateINIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateOUTIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bigPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +886,41 @@
         private FontAwesome.Sharp.IconPictureBox dateOUTIcon;
         private Label dateOUTLabel;
         private TextBox dateOUTTextBox;
+        private FontAwesome.Sharp.IconButton seeAllPageIconButton;
+        private DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton refreshSeeIconButton;
+        private FontAwesome.Sharp.IconButton addProductButton;
+        private FontAwesome.Sharp.IconButton attProductButton;
+        private FontAwesome.Sharp.IconButton removeProductButton;
+        private Label checkLabel;
+        private Label soonLabel;
+        private DataGridViewTextBoxColumn Etiqueta;
+        private DataGridViewTextBoxColumn Descrição;
+        private DataGridViewTextBoxColumn Marca;
+        private DataGridViewTextBoxColumn Preço;
+        private DataGridViewTextBoxColumn Detalhes;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn tag;
+        private DataGridViewTextBoxColumn description;
+        private DataGridViewTextBoxColumn brand;
+        private DataGridViewTextBoxColumn price;
+        private DataGridViewTextBoxColumn details;
+        private DataGridViewTextBoxColumn dateIN;
+        private DataGridViewTextBoxColumn dateOUT;
+        private DataGridViewTextBoxColumn sold;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private PictureBox bigPictureBox;
     }
 }

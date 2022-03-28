@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 
 namespace WinFormsApp1.ProgramData
 {
@@ -12,7 +13,7 @@ namespace WinFormsApp1.ProgramData
 		static string path = Directory.GetCurrentDirectory() + "/database.db";
 		private string LocalData = $"Data Source={path}";
 
-		public void AddProduct(string tag, string description, string brand, double price, string details, string dateIN)
+		public void AddProduct(string tag, string description, string brand, string price, string details, string dateIN)
 		{
 			using var data = new SQLiteConnection(LocalData);
 			data.Open();
@@ -26,7 +27,7 @@ namespace WinFormsApp1.ProgramData
 			Console.WriteLine($"add into products{tag}, {description}, {brand}, {price}, {details}");
 		}
 
-		public void SellProduct(string tag, double price, string dateOUT)
+		public void SellProduct(string tag, string price, string dateOUT)
 		{
 			using var data = new SQLiteConnection(LocalData);
 			data.Open();
@@ -65,6 +66,19 @@ namespace WinFormsApp1.ProgramData
 			cmd.ExecuteNonQuery();
 
 			data.Close();
+		}
+
+		public DataTable GetAllProducts()
+        {
+			using var data = new SQLiteConnection(LocalData);
+			data.Open();
+
+			using var cmd = new SQLiteCommand("SELECT tag, description, brand, price, details, dateIN, dateOUT, sold FROM products", data);
+			SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+
+			DataTable dt = new DataTable();
+			adapter.Fill(dt);
+			return dt;
 		}
 	}
 }
