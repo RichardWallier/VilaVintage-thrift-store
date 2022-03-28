@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ckfbuXUOHID5ig0L2jg6LBkroA57adM0sTNlnAA4HhP5Q70e8jwbxypPfZqOaIzV5Y04u+A2zu44blnfWsCzzw==",
+  "dgSpecHash": "k478B2v+uaQdc7P4JfDThHPUjOkbY9+2O0XReP8QEO8eD7auaDgQn/Dw57rBM+FUIQE0ncP69PJnJ/P9z1qPSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rwall\\Desktop\\VilaVintage3\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
+  "projectFilePath": "C:\\Users\\rwall\\Desktop\\final\\DatabaseManipulationFinal\\DatabaseManipulationFinal\\DatabaseManipulationFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rwall\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\rwall\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",

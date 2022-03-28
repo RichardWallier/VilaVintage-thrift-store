@@ -388,6 +388,12 @@ namespace DatabaseManipulationFinal
             addPageIconButton.BackColor = Color.FromArgb(160, 187, 172);
             attPageIconButton.BackColor = Color.FromArgb(160, 187, 172);
             seeAllPageIconButton.BackColor = Color.FromArgb(160, 187, 172);
+
+            dataGridView2.DataSource = null;
+            dataGridView2.Columns.Clear();
+
+            DatabaseControl data = new DatabaseControl();
+            dataGridView2.DataSource = data.GetAllProducts();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -465,6 +471,12 @@ namespace DatabaseManipulationFinal
             addPageIconButton.BackColor = Color.FromArgb(160, 187, 172);
             attPageIconButton.BackColor = Color.FromArgb(160, 187, 172);
             removePageIconButton.BackColor = Color.FromArgb(160, 187, 172);
+
+            dataGridView1.DataSource = null;
+            dataGridView1.Columns.Clear();
+
+            DatabaseControl data = new DatabaseControl();
+            dataGridView1.DataSource = data.GetAllProducts();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -567,6 +579,10 @@ namespace DatabaseManipulationFinal
             }
             string tag = tagTextBox.Text;
             data.RemoveProduct(tag);
+            dataGridView2.DataSource = null;
+            dataGridView2.Columns.Clear();
+
+            dataGridView2.DataSource = data.GetAllProducts();
 
             tagTextBox.Text = "";
             checkLabel.Text = $"Etiqueta {tag} removida!";

@@ -283,9 +283,9 @@
             this.tagLabel.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tagLabel.Location = new System.Drawing.Point(411, 67);
             this.tagLabel.Name = "tagLabel";
-            this.tagLabel.Size = new System.Drawing.Size(226, 32);
+            this.tagLabel.Size = new System.Drawing.Size(234, 32);
             this.tagLabel.TabIndex = 3;
-            this.tagLabel.Text = "Etiqueta- - - - - - -";
+            this.tagLabel.Text = "Etiqueta - - - - - - -";
             // 
             // tagIcon
             // 
@@ -655,9 +655,8 @@
             this.checkLabel.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkLabel.Location = new System.Drawing.Point(549, 426);
             this.checkLabel.Name = "checkLabel";
-            this.checkLabel.Size = new System.Drawing.Size(55, 21);
+            this.checkLabel.Size = new System.Drawing.Size(0, 21);
             this.checkLabel.TabIndex = 0;
-            this.checkLabel.Text = "label1";
             // 
             // soonLabel
             // 
