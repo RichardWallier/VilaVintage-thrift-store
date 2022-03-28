@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.seeAllPageIconButton = new FontAwesome.Sharp.IconButton();
             this.removePageIconButton = new FontAwesome.Sharp.IconButton();
@@ -123,7 +124,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 550);
+            this.panel1.Size = new System.Drawing.Size(270, 558);
             this.panel1.TabIndex = 0;
             // 
             // seeAllPageIconButton
@@ -480,7 +481,7 @@
             this.sellProductButton.IconColor = System.Drawing.Color.Black;
             this.sellProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sellProductButton.IconSize = 60;
-            this.sellProductButton.Location = new System.Drawing.Point(603, 457);
+            this.sellProductButton.Location = new System.Drawing.Point(603, 470);
             this.sellProductButton.Name = "sellProductButton";
             this.sellProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.sellProductButton.Size = new System.Drawing.Size(219, 81);
@@ -591,7 +592,7 @@
             this.refreshSeeIconButton.IconColor = System.Drawing.Color.Black;
             this.refreshSeeIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.refreshSeeIconButton.IconSize = 60;
-            this.refreshSeeIconButton.Location = new System.Drawing.Point(300, 509);
+            this.refreshSeeIconButton.Location = new System.Drawing.Point(300, 516);
             this.refreshSeeIconButton.Name = "refreshSeeIconButton";
             this.refreshSeeIconButton.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.refreshSeeIconButton.Size = new System.Drawing.Size(215, 35);
@@ -607,7 +608,7 @@
             this.addProductButton.IconColor = System.Drawing.Color.Black;
             this.addProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addProductButton.IconSize = 60;
-            this.addProductButton.Location = new System.Drawing.Point(603, 457);
+            this.addProductButton.Location = new System.Drawing.Point(603, 470);
             this.addProductButton.Name = "addProductButton";
             this.addProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.addProductButton.Size = new System.Drawing.Size(219, 81);
@@ -623,7 +624,7 @@
             this.attProductButton.IconColor = System.Drawing.Color.Black;
             this.attProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.attProductButton.IconSize = 60;
-            this.attProductButton.Location = new System.Drawing.Point(603, 457);
+            this.attProductButton.Location = new System.Drawing.Point(603, 470);
             this.attProductButton.Name = "attProductButton";
             this.attProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.attProductButton.Size = new System.Drawing.Size(219, 81);
@@ -639,7 +640,7 @@
             this.removeProductButton.IconColor = System.Drawing.Color.Black;
             this.removeProductButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.removeProductButton.IconSize = 60;
-            this.removeProductButton.Location = new System.Drawing.Point(603, 457);
+            this.removeProductButton.Location = new System.Drawing.Point(603, 470);
             this.removeProductButton.Name = "removeProductButton";
             this.removeProductButton.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.removeProductButton.Size = new System.Drawing.Size(219, 81);
@@ -788,7 +789,7 @@
             this.bigPictureBox.Image = global::DatabaseManipulationFinal.Properties.Resources.cuted;
             this.bigPictureBox.Location = new System.Drawing.Point(270, 52);
             this.bigPictureBox.Name = "bigPictureBox";
-            this.bigPictureBox.Size = new System.Drawing.Size(775, 498);
+            this.bigPictureBox.Size = new System.Drawing.Size(773, 506);
             this.bigPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bigPictureBox.TabIndex = 27;
             this.bigPictureBox.TabStop = false;
@@ -798,7 +799,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(117)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(1170, 550);
+            this.ClientSize = new System.Drawing.Size(1170, 558);
             this.Controls.Add(this.bigPictureBox);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.soonLabel);
@@ -832,8 +833,9 @@
             this.Controls.Add(this.tagTextBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "DatabaseManipulation";
+            this.Text = "Vila Vintage";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
